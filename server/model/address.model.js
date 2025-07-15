@@ -6,6 +6,9 @@ const addressSchema = new mongoose.Schema({
         default:""
     },
     city:{
+
+
+        
         type:String,
         default:""
     },
