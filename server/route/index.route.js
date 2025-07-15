@@ -11,9 +11,8 @@ const indexRoute = express.Router()
 
 indexRoute.use("/user", userRouter);
 indexRoute.use("/category",categoryRouter)
-indexRoute.use('/subcategory',subcategory)
-indexRoute.use('/product',product)
+indexRoute.use("/subcategory",subcategory)
+indexRoute.use("/product",product)
 indexRoute.use("/file" , uploadRouter)
-indexRoute.use('/cart',cartRouter)
-
+indexRoute.use("/cart",cartRouter)
 export default indexRoute
