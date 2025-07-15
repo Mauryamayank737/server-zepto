@@ -1,16 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
 import { DataBaseConnection } from "./config/databaseConnection.js";
-import userRouter from "./route/user.router.js";
-// import fileUpload from "express-fileupload";
 import morgan from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import categoryRouter from "./route/category.route.js";
-import uploadRouter from "./route/upload.route.js";
-import subcategory from "./route/subcategory.route.js";
-import product from "./route/product.route.js";
+import indexRoute from "./route/index.route.js";
 
 dotenv.config();
 const app = express();
@@ -37,11 +32,7 @@ app.get((req, res) => {
   res.send(console.log("hello"));
 });
 
-app.use("/api/user", userRouter);
-app.use("/api/category",categoryRouter)
-app.use('/api/subcategory',subcategory)
-app.use('/api/product',product)
-app.use("/api/file" , uploadRouter)
+app.use("/api",indexRoute)
 
 app.listen(port, (req, res) => {
   DataBaseConnection();
