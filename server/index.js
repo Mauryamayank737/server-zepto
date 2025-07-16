@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://client-zepto.vercel.app", // Your front-end origin
+    origin: "https://client-zepto.vercel.app/", // Your front-end origin
     credentials: true, // Allow cookies
   })
 );
