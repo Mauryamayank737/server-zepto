@@ -34,7 +34,7 @@ export  const auth = async (req, res, next) => {
   } catch (error) {
     console.log(error, "auth middleware error");
     return res.status(500).json({
-      message: error.message || error,
+      message: "You have not login",
       error: true,
       success: false,
       body: {},
